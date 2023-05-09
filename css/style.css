@@ -1,0 +1,44 @@
+body {
+    background-color: #404040;
+}
+
+.box-line {
+    background-color: #969696;
+    border: 5px solid black;
+    border-radius: 15px;
+    margin: auto;
+    margin-top: 3%;
+    padding: 3%;
+    width: 80%;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.box-line img {
+    border-radius: 0px;
+    width: 70px;
+
+}
+.box-line img#perfil {
+    border-radius: 50%;
+    border:  5px solid #000;
+}
+
+.text {
+    
+    margin-left: 10px;
+    align-items: left;
+    text-align: justify;
+    padding: 3%;
+
+}
+
+.text b {
+    font-size: 20px;
+}
+
+.text p,a {
+    font-size: 14px;
+    display: block;
+}
