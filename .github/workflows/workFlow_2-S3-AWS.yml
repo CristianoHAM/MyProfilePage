@@ -12,7 +12,7 @@ jobs:
       uses: actions/checkout@v2
 
     - name: AWS Credentials
-      uses: aws-actions/configure-aws-credantials@v1
+      uses: aws-actions/configure-aws-credentials@v1
         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACESS_KEY }}
         aws-region: us-east-1
