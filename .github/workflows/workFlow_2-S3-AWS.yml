@@ -1,4 +1,4 @@
-AWS_BUCKET_S3_NAMEnama: workflow_2-S3-AWS
+name: workflow_2-S3-AWS
 on:
   push:
     branches:
