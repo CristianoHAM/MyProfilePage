@@ -21,4 +21,4 @@ jobs:
     - name: Deploy no S3
       env:
         BUCKET_NAME: profile.chmdev.com.br
-      run: aws s3 cp . s3://$BUCKET_NAME
+      run: aws s3 sync . s3://$BUCKET_NAME
