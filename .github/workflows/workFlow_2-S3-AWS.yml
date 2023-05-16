@@ -22,3 +22,6 @@ jobs:
       env:
         BUCKET_NAME: profile.chmdev.com.br
       run: aws s3 sync . s3://$BUCKET_NAME
+           aws cloudfront create-invalidation --distribution-id E24SNAWOYBQNT3 --paths "/*"
+
+
