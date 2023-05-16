@@ -20,6 +20,6 @@ jobs:
 
     - name: Deploy no S3
       env:
-        BUCKET_NAME: ${{ AWS_BUCKET_S3_NAME }}
+        BUCKET_NAME: ${{ secrets.AWS_BUCKET_S3_NAME }}
       run: aws s3 cp . s3://$BUCKET_NAME
 
