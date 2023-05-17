@@ -14,15 +14,11 @@ jobs:
     - name: AWS Credentials
       uses: aws-actions/configure-aws-credentials@v1
       with:
-         aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
-         aws-secret-access-key: ${{ secrets.AWS_SECRET_ACESS_KEY }}
-         aws-region: us-east-1
+        aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+        aws-secret-access-key: ${{ secrets.AWS_SECRET_ACESS_KEY }}
+        aws-region: us-east-1
 
     - name: Deploy no S3
-       env:
-         BUCKET_NAME: profile.chmdev.com.br
-       run: aws s3 sync . s3://$BUCKET_NAME
-    
-    - name: Run AWS CLI command
-       run: |
-        aws cloudfront create-invalidation --distribution-id 24SNAWOYBQNT3 --paths "/*"
+      env:
+        BUCKET_NAME: profile.chmdev.com.br
+      run: aws s3 sync . s3://$BUCKET_NAME
