@@ -7,6 +7,10 @@ on:
 jobs:
   job_1:
     runs-on: ubuntu-latest
+    env:
+      BUCKET_NAME: profile.chmdev.com.br
+      DIST_ID: E24SNAWOYBQNT3
+
     steps:
     - name: Checkuot
       uses: actions/checkout@v2
@@ -19,6 +23,8 @@ jobs:
         aws-region: us-east-1
 
     - name: Deploy no S3
-      env:
-        BUCKET_NAME: profile.chmdev.com.br
-      run: aws s3 sync . s3://$BUCKET_NAME
+      run: aws s3 sync . s3://${{ env.BUCKET_NAME }}
+    
+    - name: 
+      run: aws cloudfront create-invalidation --distribution-id ${{ env.DIST_ID }} --paths "/*"
+    
