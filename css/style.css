@@ -1,10 +1,37 @@
 html,
 body {
-    background-color: #979797;
+    background-color: rgb(0, 0, 0)  ;
     margin: 0;
     padding: 0;
 }
+.conteiner-modal {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.5);
+  }
+  b,p{
+    color: rgb(0, 255, 0);
+  }
+/* card do perfil */
+.card#perfil {
+    height: 130px;
+}
 
+.card#perfil img {
+    border-radius: 50%;
+    border: 4px solid rgb(0, 255, 0);
+    width: 94px;
+    height: 94px;
+    margin: 8px;
+}
+
+/* padrão todos os card's */
 a {
     background-color: transparent;
     border: none;
@@ -12,10 +39,9 @@ a {
     text-decoration: none;
   }
 
-/* padrão todos os card's */
 .card {
-    background-color: #d4d4d4;
-    border: 4px solid #000000;
+    background-color: rgba(0,0,0 ,0.8);
+    border: 4px solid rgb(0, 255, 0);
     border-radius: 14px;
     margin: auto;
     margin-top: 2%;
@@ -24,10 +50,19 @@ a {
     width: 80%;
     display: flex;
     align-items: center;
+    
 }
 
 .card:hover {
-    opacity: 0.7;
+    opacity: 0.9;
+}
+
+.card svg {
+    border-radius: 0px;
+    width: 60px;
+    height: 60px;
+    margin: 8px;
+    fill: rgb(0, 255, 0);
 }
 
 .card img {
@@ -35,6 +70,7 @@ a {
     width: 60px;
     height: 60px;
     margin: 8px;
+    fill: rgb(0, 255, 0);
 }
 
 .text {
@@ -54,16 +90,3 @@ a {
     margin: 0;
 }
   
-
-/* card do perfil */
-.card#perfil {
-    height: 130px;
-}
-
-.card#perfil img {
-    border-radius: 50%;
-    border: 4px solid #000;
-    width: 94px;
-    height: 94px;
-    margin: 8px;
-}
